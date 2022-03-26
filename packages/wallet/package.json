@@ -1,0 +1,44 @@
+{
+  "name": "@bcc-sdk/wallet",
+  "version": "0.1.5",
+  "description": "Wallet modules",
+  "engines": {
+    "node": "^14"
+  },
+  "main": "dist/index.js",
+  "repository": "https://github.com/The-Blockchain-Company/bcc-js-sdk/packages/wallet",
+  "contributors": [
+    
+  ],
+  "license": "MPL-2.0",
+  "scripts": {
+    "build": "tsc --build ./src",
+    "tscNoEmit": "shx echo typescript --noEmit command not implemented yet",
+    "cleanup": "shx rm -rf dist node_modules",
+    "coverage": "yarn test --coverage",
+    "lint": "eslint --ignore-path ../../.eslintignore \"**/*.ts\"",
+    "prepack": "yarn build",
+    "test": "jest -c ./jest.config.js",
+    "test:debug": "DEBUG=true yarn test"
+  },
+  "devDependencies": {
+    "@bcc-sdk/util-dev": "0.1.5",
+    "shx": "^0.3.3"
+  },
+  "dependencies": {
+    "@bcc-sdk/cip2": "0.1.5",
+    "@bcc-sdk/core": "0.1.5",
+    "delay": "^5.0.0",
+    "emittery": "^0.10.0",
+    "bip39": "^3.0.4",
+    "lodash-es": "^4.17.21",
+    "ts-custom-error": "^3.2.0",
+    "ts-log": "^2.2.3"
+  },
+  "files": [
+    "dist/*",
+    "!dist/tsconfig.tsbuildinfo",
+    "LICENSE",
+    "NOTICE"
+  ]
+}

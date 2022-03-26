@@ -1,0 +1,36 @@
+{
+  "name": "@bcc-sdk/core",
+  "version": "0.1.5",
+  "description": "Core types and libraries for Bcc",
+  "engines": {
+    "node": "^14"
+  },
+  "main": "dist/index.js",
+  "repository": "https://github.com/The-Blockchain-Company/bcc-js-sdk/packages/core",
+  "author": "Rhys Bartels-Waller",
+  "license": "MPL-2.0",
+  "scripts": {
+    "build": "tsc --build ./src",
+    "tscNoEmit": "shx echo typescript --noEmit command not implemented yet",
+    "cleanup": "shx rm -rf dist node_modules",
+    "lint": "eslint --ignore-path ../../.eslintignore \"**/*.ts\"",
+    "test": "jest -c ./jest.config.js",
+    "coverage": "shx echo No coverage report for this package",
+    "prepack": "yarn build"
+  },
+  "devDependencies": {
+    "@bcc-sdk/util-dev": "0.1.5",
+    "shx": "^0.3.3"
+  },
+  "dependencies": {
+    "@bcc-ogmios/schema": "4.1.0",
+    "@emurgo/bcc-serialization-lib-nodejs": "9.1.0",
+    "@emurgo/bcc-serialization-lib-browser": "9.1.0"
+  },
+  "files": [
+    "dist/*",
+    "!dist/tsconfig.tsbuildinfo",
+    "LICENSE",
+    "NOTICE"
+  ]
+}

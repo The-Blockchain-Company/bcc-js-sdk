@@ -1,0 +1,35 @@
+{
+  "name": "@bcc-sdk/blockfrost",
+  "version": "0.1.5",
+  "description": "Blockfrost provider for Bcc JS SDK",
+  "engines": {
+    "node": "^14"
+  },
+  "bin": "dist/index.js",
+  "main": "dist/index.js",
+  "repository": "https://github.com/The-Blockchain-Company/bcc-js-sdk/packages/blockfrost",
+  "author": "James Sweetland",
+  "license": "MPL-2.0",
+  "scripts": {
+    "build": "tsc --build ./src",
+    "tscNoEmit": "shx echo typescript --noEmit command not implemented yet",
+    "cleanup": "shx rm -rf dist node_modules",
+    "lint": "eslint --ignore-path ../../.eslintignore \"**/*.ts\"",
+    "test": "jest -c ./jest.config.js",
+    "coverage": "shx echo No coverage report for this package",
+    "prepack": "yarn build"
+  },
+  "devDependencies": {
+    "shx": "^0.3.3"
+  },
+  "dependencies": {
+    "@blockfrost/blockfrost-js": "^1.3.0",
+    "@bcc-sdk/core": "0.1.5"
+  },
+  "files": [
+    "dist/*",
+    "!dist/tsconfig.tsbuildinfo",
+    "LICENSE",
+    "NOTICE"
+  ]
+}

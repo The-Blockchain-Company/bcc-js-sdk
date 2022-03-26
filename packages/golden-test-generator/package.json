@@ -1,0 +1,60 @@
+{
+  "name": "@bcc-sdk/golden-test-generator",
+  "version": "0.1.5",
+  "description": "Generate golden test files for a range of Bcc concepts",
+  "engines": {
+    "node": "^14"
+  },
+  "bin": "dist/index.js",
+  "main": "dist/index.js",
+  "repository": "https://github.com/The-Blockchain-Company/bcc-js-sdk/packages/golden-test-generator",
+  "author": "Rhys Bartels-Waller",
+  "license": "MPL-2.0",
+  "scripts": {
+    "build": "tsc --build ./src",
+    "tscNoEmit": "shx echo typescript --noEmit command not implemented yet",
+    "cleanup": "shx rm -rf dist node_modules",
+    "dev": "API_PORT=3000 OGMIOS_HOST=localhost OGMIOS_PORT=1337 ts-node-dev ./src/index.ts",
+    "lint": "shx echo linting disabled in this package temporarily",
+    "prepkg": "yarn build",
+    "pkg": "yarn build && pkg -o build/golden-test-generator .",
+    "prestart": "yarn build",
+    "start": "API_PORT=3000 OGMIOS_HOST=localhost OGMIOS_PORT=1337 ts-node ./src/index.ts",
+    "prepack": "yarn build",
+    "pretest": "yarn build",
+    "test": "jest -c ./jest.config.js",
+    "coverage": "shx echo No coverage report for this package"
+  },
+  "dependencies": {
+    "@bcc-ogmios/client": "4.1.0",
+    "chalk": "^4.1.1",
+    "clear": "^0.1.0",
+    "cli-progress": "^3.9.0",
+    "commander": "^8.0.0",
+    "fs-extra": "^10.0.0",
+    "git-last-commit": "^1.0.0",
+    "json-bigint": "^1.0.0",
+    "object-hash": "^2.2.0",
+    "ts-log": "^2.2.3"
+  },
+  "devDependencies": {
+    "@types/cli-progress": "^3.9.2",
+    "@types/fs-extra": "^9.0.12",
+    "@types/object-hash": "^2.1.1",
+    "@types/ws": "^7.4.6",
+    "pkg": "^5.3.0",
+    "shx": "^0.3.3"
+  },
+  "pkg": {
+    "targets": [
+      "node14-linux-x64",
+      "node14-macos-x64"
+    ]
+  },
+  "files": [
+    "dist/*",
+    "!dist/tsconfig.tsbuildinfo",
+    "LICENSE",
+    "NOTICE"
+  ]
+}

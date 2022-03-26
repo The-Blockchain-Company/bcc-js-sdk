@@ -1,0 +1,55 @@
+{
+  "name": "@bcc-sdk/bcc-graphql",
+  "version": "0.1.5",
+  "description": "Bcc GraphQL Providers",
+  "engines": {
+    "node": "^14"
+  },
+  "main": "dist/index.js",
+  "repository": "https://github.com/The-Blockchain-Company/bcc-js-sdk/packages/bcc-graphql",
+  "author": "Robert Mourey Jr <rmourey_jr@blockchain-company.io>",
+  "contributors": [
+    
+  ],
+  "license": "MPL-2.0",
+  "scripts": {
+    "build": "run-s build:ts build:schema",
+    "build:ts": "tsc --build ./src",
+    "build:schema": "node ./scripts/buildSchema.js",
+    "build:schema:dgraph": "node ./scripts/buildDgraphSchema.js",
+    "generate": "run-s build:ts build:schema:dgraph graphql-codegen",
+    "graphql-codegen": "graphql-codegen",
+    "tscNoEmit": "shx echo typescript --noEmit command not implemented yet",
+    "cleanup": "shx rm -rf dist node_modules",
+    "lint": "eslint --ignore-path ../../.eslintignore \"**/*.ts\"",
+    "test": "jest -c ./jest.config.js",
+    "coverage": "yarn test --coverage",
+    "prepack": "yarn build",
+    "test:debug": "DEBUG=true yarn test"
+  },
+  "devDependencies": {
+    "@graphql-codegen/cli": "^2.2.1",
+    "@graphql-codegen/typescript": "^2.2.4",
+    "@graphql-codegen/typescript-graphql-request": "^4.1.6",
+    "@graphql-codegen/typescript-operations": "^2.1.8",
+    "@graphql-tools/utils": "^8.4.0",
+    "npm-run-all": "^4.1.5",
+    "shx": "^0.3.3"
+  },
+  "dependencies": {
+    "@bcc-graphql/client-ts": "^5.1.0-beta.1",
+    "@bcc-ogmios/client": "4.1.0",
+    "@bcc-sdk/core": "0.1.5",
+    "class-validator": "^0.13.1",
+    "graphql": "^15.6.1",
+    "graphql-request": "^3.5.0",
+    "reflect-metadata": "^0.1.13",
+    "type-graphql": "^1.1.1"
+  },
+  "files": [
+    "dist/*",
+    "!dist/tsconfig.tsbuildinfo",
+    "LICENSE",
+    "NOTICE"
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "name": "@bcc-sdk/bcc-graphql-db-sync",
+  "version": "0.1.5",
+  "description": "Bcc Graphql (bcc-db-sync) integration",
+  "engines": {
+    "node": "^14"
+  },
+  "bin": "dist/index.js",
+  "main": "dist/index.js",
+  "repository": "https://github.com/The-Blockchain-Company/bcc-js-sdk/packages/bcc-graphql-db-sync",
+  "author": "James Sweetland",
+  "license": "MPL-2.0",
+  "scripts": {
+    "build": "tsc --build ./src",
+    "tscNoEmit": "shx echo typescript --noEmit command not implemented yet",
+    "cleanup": "shx rm -rf dist node_modules",
+    "lint": "eslint --ignore-path ../../.eslintignore \"**/*.ts\"",
+    "test": "jest -c ./jest.config.js",
+    "coverage": "shx echo No coverage report for this package",
+    "prepack": "yarn build"
+  },
+  "devDependencies": {
+    "shx": "^0.3.3"
+  },
+  "dependencies": {
+    "@bcc-graphql/client-ts": "^5.1.0-beta.1",
+    "@bcc-ogmios/client": "4.1.0",
+    "graphql": "^15.5.1",
+    "buffer": "^6.0.3",
+    "graphql-request": "^3.5.0"
+  },
+  "files": [
+    "dist/*",
+    "!dist/tsconfig.tsbuildinfo",
+    "LICENSE",
+    "NOTICE"
+  ]
+}

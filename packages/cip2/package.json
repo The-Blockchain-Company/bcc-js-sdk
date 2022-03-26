@@ -1,0 +1,40 @@
+{
+  "name": "@bcc-sdk/cip2",
+  "version": "0.1.5",
+  "description": "TypeScript definitions for CIP2 (Coin Selection Algorithms for Bcc)",
+  "engines": {
+    "node": "^14"
+  },
+  "main": "dist/index.js",
+  "repository": "https://github.com/The-Blockchain-Company/bcc-js-sdk/packages/cip2",
+  "author": "Robert Mourey Jr <rmourey_jr@blockchain-company.io>",
+  "license": "MPL-2.0",
+  "scripts": {
+    "build": "tsc --build ./src",
+    "tscNoEmit": "shx echo typescript --noEmit command not implemented yet",
+    "cleanup": "shx rm -rf dist node_modules",
+    "lint": "eslint --ignore-path ../../.eslintignore \"**/*.ts\"",
+    "test": "jest -c ./jest.config.js",
+    "coverage": "yarn test --coverage",
+    "prepack": "yarn build",
+    "test:debug": "DEBUG=true yarn test"
+  },
+  "devDependencies": {
+    "@bcc-sdk/util-dev": "0.1.5",
+    "@types/lodash-es": "^4.17.5",
+    "fast-check": "^2.17.0",
+    "lodash": "^4.17.21",
+    "shx": "^0.3.3"
+  },
+  "dependencies": {
+    "@bcc-sdk/core": "0.1.5",
+    "lodash-es": "^4.17.21",
+    "ts-custom-error": "^3.2.0"
+  },
+  "files": [
+    "dist/*",
+    "!dist/tsconfig.tsbuildinfo",
+    "LICENSE",
+    "NOTICE"
+  ]
+}

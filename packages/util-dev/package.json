@@ -1,0 +1,35 @@
+{
+  "name": "@bcc-sdk/util-dev",
+  "version": "0.1.5",
+  "description": "Utilities for tests in other packages",
+  "engines": {
+    "node": "^14"
+  },
+  "main": "dist/index.js",
+  "repository": "https://github.com/The-Blockchain-Company/bcc-js-sdk/packages/util-dev",
+  "author": "Robert Mourey Jr <rmourey_jr@blockchain-company.io>",
+  "license": "MPL-2.0",
+  "scripts": {
+    "build": "tsc --build ./src",
+    "tscNoEmit": "shx echo typescript --noEmit command not implemented yet",
+    "cleanup": "shx rm -rf dist node_modules",
+    "lint": "eslint --ignore-path ../../.eslintignore \"**/*.ts\"",
+    "test": "jest -c ./jest.config.js",
+    "coverage": "yarn test --coverage",
+    "prepack": "yarn build",
+    "test:debug": "DEBUG=true yarn test"
+  },
+  "devDependencies": {
+    "@bcc-sdk/cip2": "0.1.5"
+  },
+  "dependencies": {
+    "@bcc-sdk/core": "0.1.5",
+    "delay": "^5.0.0"
+  },
+  "files": [
+    "dist/*",
+    "!dist/tsconfig.tsbuildinfo",
+    "LICENSE",
+    "NOTICE"
+  ]
+}

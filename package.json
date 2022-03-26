@@ -1,0 +1,80 @@
+{
+  "name": "bcc-sdk",
+  "version": "0.1.5",
+  "private": true,
+  "description": "An SDK for interacting with the Bcc blockchain",
+  "engines": {
+    "node": "^14"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "yarn workspaces run build",
+    "predocs": "yarn build",
+    "docs": "typedoc --packages . && yarn workspaces run coverage && node collectCoverage.mjs",
+    "cleanup": "yarn workspaces run cleanup && shx rm -rf node_modules",
+    "lint": "yarn workspaces run lint",
+    "tscNoEmit": "yarn workspaces run tscNoEmit",
+    "prepare": "husky install",
+    "pre-commit": "lint-staged",
+    "mainnet:up": "DOCKER_BUILDKIT=1 COMPOSE_DOCKER_CLI_BUILD=1 docker-compose -p sdk-mainnet up",
+    "mainnet:down": "docker-compose -p sdk-mainnet down",
+    "test": "yarn workspaces run test",
+    "test:debug": "DEBUG=true yarn workspaces run test",
+    "testnet:up": "DOCKER_BUILDKIT=1 COMPOSE_DOCKER_CLI_BUILD=1 OGMIOS_PORT=1338 NETWORK=testnet docker-compose -p sdk-testnet up",
+    "testnet:down": "docker-compose -p sdk-testnet down",
+    "bump-version": "npx standard-version"
+  },
+  "lint-staged": {
+    "*(apps/**/*.{js,ts}|packages/!(*golden-test-generator)/**/*.{js,ts})": [
+      "yarn lint",
+      "yarn tscNoEmit"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/The-Blockchain-Company/bcc-js-sdk.git"
+  },
+  "keywords": [
+    "Bcc"
+  ],
+  "contributors": [
+   
+  ],
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/The-Blockchain-Company/bcc-js-sdk/issues"
+  },
+  "homepage": "https://github.com/The-Blockchain-Company/bcc-js-sdk#readme",
+  "devDependencies": {
+    "@atixlabs/eslint-config": "^1.2.3",
+    "@commitlint/cli": "^13.1.0",
+    "@commitlint/config-conventional": "^13.1.0",
+    "@types/jest": "^26.0.24",
+    "@types/node": "^16.0.0",
+    "@typescript-eslint/eslint-plugin": "^4.29.0",
+    "@typescript-eslint/parser": "^4.29.0",
+    "eslint": "^7.32.0",
+    "eslint-import-resolver-typescript": "^2.4.0",
+    "eslint-plugin-filenames": "^1.3.2",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-jest": "^24.4.0",
+    "eslint-plugin-jsdoc": "^36.0.7",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-promise": "^5.1.0",
+    "eslint-plugin-sonarjs": "^0.9.1",
+    "eslint-plugin-unicorn": "^35.0.0",
+    "eslint-watch": "^7.0.0",
+    "fs-extra": "^10.0.0",
+    "husky": "^7.0.1",
+    "jest": "^27.0.6",
+    "lint-staged": "^11.1.2",
+    "prettier": "^2.3.2",
+    "ts-jest": "^27.0.3",
+    "ts-node": "^10.0.0",
+    "ts-node-dev": "^1.1.8",
+    "typedoc": "^0.21.6",
+    "typescript": "^4.3.5"
+  }
+}
