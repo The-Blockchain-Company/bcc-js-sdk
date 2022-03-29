@@ -24,8 +24,8 @@
   },
   "dependencies": {
     "@bcc-ogmios/schema": "4.1.0",
-    "@emurgo/bcc-serialization-lib-nodejs": "9.1.0",
-    "@emurgo/bcc-serialization-lib-browser": "9.1.0"
+    "@the-blockchain-company/bcc-serialization-lib-nodejs": "9.1.0",
+    "@the-blockchain-company/bcc-serialization-lib-browser": "9.1.0"
   },
   "files": [
     "dist/*",

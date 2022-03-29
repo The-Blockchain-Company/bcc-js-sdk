@@ -895,8 +895,8 @@
   integrity sha512-Sgq8ILgQZT1FnkV3ICvjkb8XgxPI22f5gW41TbBHoDhVE7q+ECbYu9z00xNX5ZK54gR3kfcAcoEcF70fFolsyQ==
   dependencies:
     "@blockfrost/openapi" "0.1.27"
-    "@emurgo/bcc-serialization-lib-nodejs" "^8.1.0"
-    "@emurgo/cip14-js" "2.0.0"
+    "@the-blockchain-company/bcc-serialization-lib-nodejs" "^8.1.0"
+    "@the-blockchain-company/cip14-js" "2.0.0"
     axios "^0.21.1"
     form-data "^4.0.0"
     retry-axios "^2.4.0"
@@ -1075,24 +1075,24 @@
   resolved "https://registry.yarnpkg.com/@deepcode/dcignore/-/dcignore-1.0.2.tgz#39e4a3df7dde8811925330506e4bb3fbf3c288d8"
   integrity sha512-DPgxtHuJwBORpqRkPXzzOT+uoPRVJmaN7LR+pmeL6DQM90kj6G6GFUH1i/YpRH8NbML8ZGEDwB9f9u4UwD2pzg==
 
-"@emurgo/bcc-serialization-lib-browser@9.1.0":
+"@the-blockchain-company/bcc-serialization-lib-browser@9.1.0":
   version "9.1.0"
-  resolved "https://registry.yarnpkg.com/@emurgo/bcc-serialization-lib-browser/-/bcc-serialization-lib-browser-9.1.0.tgz#2a80800608877555d1ff52ed839e7f2c8b1ace95"
+  resolved "https://registry.yarnpkg.com/@the-blockchain-company/bcc-serialization-lib-browser/-/bcc-serialization-lib-browser-9.1.0.tgz#2a80800608877555d1ff52ed839e7f2c8b1ace95"
   integrity sha512-FaNW/RalB/BPYvQbum0zkUcMxd+jKvsdwvT93GErKd/owE9W4IKhQfqI9icDZSphqFFPkDqHms2VE4XT4P7gDA==
 
-"@emurgo/bcc-serialization-lib-nodejs@9.1.0":
+"@the-blockchain-company/bcc-serialization-lib-nodejs@9.1.0":
   version "9.1.0"
-  resolved "https://registry.yarnpkg.com/@emurgo/bcc-serialization-lib-nodejs/-/bcc-serialization-lib-nodejs-9.1.0.tgz#8813b8a040c0425aab454f8ee1ba4f4709031324"
+  resolved "https://registry.yarnpkg.com/@the-blockchain-company/bcc-serialization-lib-nodejs/-/bcc-serialization-lib-nodejs-9.1.0.tgz#8813b8a040c0425aab454f8ee1ba4f4709031324"
   integrity sha512-4gW+KqejTSm/rkNwWxK/WUJvlifWqFx5ShgCtWmPuTZ/YJAZSpROI8DP+pqTakG0gGWdxPB3BnVJIPrczNwmtA==
 
-"@emurgo/bcc-serialization-lib-nodejs@^8.1.0":
+"@the-blockchain-company/bcc-serialization-lib-nodejs@^8.1.0":
   version "8.1.0"
-  resolved "https://registry.yarnpkg.com/@emurgo/bcc-serialization-lib-nodejs/-/bcc-serialization-lib-nodejs-8.1.0.tgz#76b0bfbec1eda4fe185de621c7b948f018e07319"
+  resolved "https://registry.yarnpkg.com/@the-blockchain-company/bcc-serialization-lib-nodejs/-/bcc-serialization-lib-nodejs-8.1.0.tgz#76b0bfbec1eda4fe185de621c7b948f018e07319"
   integrity sha512-BH8MhQQt+BDqWM4Yqa9Asn/vhJJLxi43pp7Crq6bdQuj2NOT2F6e3nhdLS2KJhvb47YGFdg0pnvGaH+TCmUoIA==
 
-"@emurgo/cip14-js@2.0.0":
+"@the-blockchain-company/cip14-js@2.0.0":
   version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@emurgo/cip14-js/-/cip14-js-2.0.0.tgz#6ef78ddac8a35f2725e9ccebfd5ae114716c4b48"
+  resolved "https://registry.yarnpkg.com/@the-blockchain-company/cip14-js/-/cip14-js-2.0.0.tgz#6ef78ddac8a35f2725e9ccebfd5ae114716c4b48"
   integrity sha512-EvjgTs4NCqH1j0wxXqWCj31P7NmTzl3aR+9am0OLSsf3NA9GsdKH5QNyXJrvSZILM4yWzlZNum3y8S5PfdM1aA==
   dependencies:
     bech32 "2.0.0"

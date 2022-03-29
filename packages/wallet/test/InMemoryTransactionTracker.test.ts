@@ -6,11 +6,11 @@ import { TransactionTrackerEvent, InMemoryTransactionTracker, TransactionFailure
 
 jest.mock('delay', () => jest.fn().mockResolvedValue(void 0));
 // eslint-disable-next-line sonarjs/no-duplicate-string
-jest.mock('@emurgo/bcc-serialization-lib-nodejs', () => ({
-  ...jest.requireActual('@emurgo/bcc-serialization-lib-nodejs'),
+jest.mock('@the-blockchain-company/bcc-serialization-lib-nodejs', () => ({
+  ...jest.requireActual('@the-blockchain-company/bcc-serialization-lib-nodejs'),
   hash_transaction: jest.fn()
 }));
-const cslMock = jest.requireMock('@emurgo/bcc-serialization-lib-nodejs');
+const cslMock = jest.requireMock('@the-blockchain-company/bcc-serialization-lib-nodejs');
 const mockHashTransactionReturn = (resultHash: string) => {
   cslMock.hash_transaction.mockReturnValue({
     to_bytes() {

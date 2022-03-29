@@ -55,7 +55,7 @@ describe('Address Validation', () => {
     })
   })
 
-  describe('Jörmungandr', () => {
+  describe('Quibitous', () => {
     function decodeBech32 (str : string) {
       return Buffer.from(bech32.fromWords(bech32.decode(str, 128).words))
     }

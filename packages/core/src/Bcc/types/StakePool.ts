@@ -10,7 +10,7 @@ export type Percent = number;
 export type TransactionId = Hash16;
 
 /**
- * https://github.com/bcc-foundation/CIPs/blob/master/CIP-0006/CIP-0006.md#on-chain-referenced-main-metadata-file
+ * https://github.com/the-blockchain-company/CIPs/blob/master/CIP-0006/CIP-0006.md#on-chain-referenced-main-metadata-file
  */
 export interface Cip6MetadataFields {
   /**

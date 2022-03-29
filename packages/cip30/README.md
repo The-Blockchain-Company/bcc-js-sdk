@@ -3,4 +3,4 @@ This package implements concepts from the draft specification being developed in
 package defines TypeScript types and interfaces, as well as a class to implement allow list 
 persistence.
 
-[CIP-0030]: https://github.com/bcc-foundation/CIPs/pull/88
+[CIP-0030]: https://github.com/the-blockchain-company/CIPs/pull/88

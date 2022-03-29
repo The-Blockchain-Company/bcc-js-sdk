@@ -1,6 +1,6 @@
 import { CSL } from '.';
 import { Asset, Bcc } from '..';
-import { Transaction } from '@emurgo/bcc-serialization-lib-nodejs';
+import { Transaction } from '@the-blockchain-company/bcc-serialization-lib-nodejs';
 
 export const tx = (_input: Transaction): Bcc.TxAurum => {
   throw new Error('Not implemented');

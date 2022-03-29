@@ -8,7 +8,7 @@ import {
   TransactionOutput,
   TransactionUnspentOutput,
   Value
-} from '@emurgo/bcc-serialization-lib-nodejs';
+} from '@the-blockchain-company/bcc-serialization-lib-nodejs';
 import * as Asset from '../Asset';
 import * as Bcc from '../Bcc';
 
