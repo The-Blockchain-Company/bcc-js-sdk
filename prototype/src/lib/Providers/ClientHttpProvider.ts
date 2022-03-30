@@ -2,7 +2,7 @@ import { BccProvider } from '../../Provider'
 
 export function ClientHttpProvider (_uri: string): BccProvider {
   // To be implemented by: https://github.com/The-Blockchain-Company/bcc-js-sdk/issues/4
-  // This will likely convert this interface to interact with Jormangandr and remove the any
+  // This will likely convert this interface to interact with Quibitous and remove the any
   // type casting
   return {
     submitTransaction: (_signedTransaction: string) => new Error('Not yet implemented'),
