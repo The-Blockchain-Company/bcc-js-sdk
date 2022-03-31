@@ -46,7 +46,7 @@
     "typescript": "^3.3.3333"
   },
   "dependencies": {
-    "@the-blockchain-company/ledgerjs-hw-app-bcc": "^1.0.6",
+    "@theblockchaincompanyio/ledgerjs-hw-app-bcc": "^1.0.6",
     "@ledgerhq/hw-transport-u2f": "^4.60.3",
     "@types/bech32": "^1.1.1",
     "@types/bs58": "^4.0.0",

@@ -1,4 +1,4 @@
-import { BigNum } from '@the-blockchain-company/bcc-serialization-lib-nodejs';
+import { BigNum } from '@theblockchaincompanyio/bcc-serialization-lib-nodejs';
 
 export const MAX_U64 = 18_446_744_073_709_551_615n;
 export const maxBigNum = BigNum.from_str(MAX_U64.toString());

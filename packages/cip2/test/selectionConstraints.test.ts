@@ -7,8 +7,8 @@ import { AssetId } from '@bcc-sdk/util-dev';
 import { defaultSelectionConstraints, DefaultSelectionConstraintsProps } from '../src/selectionConstraints';
 import { ProtocolParametersForInputSelection, SelectionSkeleton } from '../src/types';
 
-jest.mock('@the-blockchain-company/bcc-serialization-lib-nodejs', () => {
-  const actualCsl = jest.requireActual('@the-blockchain-company/bcc-serialization-lib-nodejs');
+jest.mock('@theblockchaincompanyio/bcc-serialization-lib-nodejs', () => {
+  const actualCsl = jest.requireActual('@theblockchaincompanyio/bcc-serialization-lib-nodejs');
   return {
     ...actualCsl,
     min_fee: jest.fn(),
@@ -17,8 +17,8 @@ jest.mock('@the-blockchain-company/bcc-serialization-lib-nodejs', () => {
     }
   };
 });
-const cslActual = jest.requireActual('@the-blockchain-company/bcc-serialization-lib-nodejs');
-const cslMock = jest.requireMock('@the-blockchain-company/bcc-serialization-lib-nodejs');
+const cslActual = jest.requireActual('@theblockchaincompanyio/bcc-serialization-lib-nodejs');
+const cslMock = jest.requireMock('@theblockchaincompanyio/bcc-serialization-lib-nodejs');
 
 describe('defaultSelectionConstraints', () => {
   const protocolParameters = {

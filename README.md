@@ -62,7 +62,7 @@ const { NormalModuleReplacementPlugin } = require('webpack');
   plugins: [
     new NormalModuleReplacementPlugin(
       /@emurgo\/bcc-serialization-lib-nodejs/,
-      '@the-blockchain-company/bcc-serialization-lib-browser'
+      '@theblockchaincompanyio/bcc-serialization-lib-browser'
     )
   ]
 }

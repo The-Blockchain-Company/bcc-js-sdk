@@ -4,7 +4,7 @@ import { TransactionOutput } from '../../../Transaction'
 import { ChainSettings } from '../../../Bcc'
 import { AddressType } from '../../../Wallet'
 
-const { default: Ledger, utils } = require('@the-blockchain-company/ledgerjs-hw-app-bcc')
+const { default: Ledger, utils } = require('@theblockchaincompanyio/ledgerjs-hw-app-bcc')
 
 async function connectToLedger () {
   const transport = await getLedgerTransportForEnvironment().create()
