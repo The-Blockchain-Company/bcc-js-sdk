@@ -1,8 +1,8 @@
-version: "3.5"
+version: "3.5" #TODO
 
 services:
   bcc-node-ogmios:
-    image: bccsolutions/bcc-node-ogmios:v4.1.0-${NETWORK:-mainnet}
+    image: tbco/bcc-node-ogmios:v4.1.0-${NETWORK:-mainnet}
     logging:
       driver: "json-file"
       options:
